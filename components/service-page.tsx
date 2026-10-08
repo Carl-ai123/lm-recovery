@@ -1,11 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Check, Crosshair, Truck } from 'lucide-react'
+import { ArrowRight, Check, Truck } from 'lucide-react'
 import { FAQ } from '@/components/faq'
 import { Gallery } from '@/components/gallery'
 import { ContactStrip, FinalCTA, CallButton, WhatsAppButton, ServiceCTA, TrustRating } from '@/components/site-actions'
 import { RecoveryRequestForm } from '@/components/recovery-request-form'
 import { SiteShell } from '@/components/site-shell'
+import { CoverageMap } from '@/components/coverage-map'
 import { areas, faqs, genuineImages } from '@/lib/site-data'
 
 type ServiceKind = 'recovery' | 'transport' | 'copart'
@@ -33,7 +34,7 @@ export function ServicePage({ kind }: { kind: ServiceKind }) {
       <section className="section pale-section"><div className="container"><div className="section-heading"><div><p className="eyebrow blue">What we handle</p><h2>{isCopart ? <>Information to include<br /><em>in your quote.</em></> : kind === 'recovery' ? <>Recovery for the<br /><em>real situation.</em></> : <>Useful for planned<br /><em>vehicle movement.</em></>}</h2></div></div><div className="feature-grid">{item.points.map((point) => <div className="feature-item" key={point}><Check /><span>{point}</span></div>)}</div></div></section>
       {isCopart && <section className="section"><div className="container form-layout"><div><p className="eyebrow blue">Copart quote request</p><h2>Send the collection<br /><em>details.</em></h2><p className="lead-copy">Use the form to prepare a WhatsApp enquiry with the information LM Recovery needs to discuss the collection.</p></div><RecoveryRequestForm mode="copart" /></div></section>}
       <section className="section"><div className="container"><div className="section-heading"><div><p className="eyebrow blue">Simple from start to finish</p><h2>How it <em>works.</em></h2></div><p>Start with the information you already have. LM Recovery will discuss the practical next step with you.</p></div><div className="process-grid">{item.process.map(([number, title, text]) => <div className="process-step" key={number}><span>{number}</span><div><h3>{title}</h3><p>{text}</p></div></div>)}</div></div></section>
-      <section className="areas-section section"><div className="container areas-grid"><div><p className="eyebrow blue">Local &amp; nationwide</p><h2>{kind === 'recovery' ? <>Local recovery<br /><em>across Kent.</em></> : <>Kent collection<br /><em>and beyond.</em></>}</h2><p>Local recovery coverage includes Rochester, Maidstone, Chatham, Strood, Gillingham, Medway and Kent. Vehicle transportation is available nationwide.</p><div className="area-chips">{areas.map((area) => <Link href="/areas-we-cover" key={area}>{area}</Link>)}</div></div><div className="map-card"><div className="map-lines" /><span className="map-pin pin-one" /><span className="map-pin pin-two" /><span className="map-pin pin-three" /><div className="map-label"><Crosshair /><span><strong>Kent based</strong><small>Nationwide vehicle transport</small></span></div></div></div></section>
+      <section className="areas-section section"><div className="container areas-grid"><div><p className="eyebrow blue">Local &amp; nationwide</p><h2>{kind === 'recovery' ? <>Local recovery<br /><em>across Kent.</em></> : <>Kent collection<br /><em>and beyond.</em></>}</h2><p>Local recovery coverage includes Rochester, Maidstone, Chatham, Strood, Gillingham, Medway and Kent. Vehicle transportation is available nationwide.</p><div className="area-chips">{areas.map((area) => <Link href="/areas-we-cover" key={area}>{area}</Link>)}</div></div><CoverageMap /></div></section>
       <Gallery compact />
       <section className="section faq-section"><div className="container faq-grid"><div><p className="eyebrow blue">Good to know</p><h2>Frequently asked<br /><em>questions.</em></h2><p>Can&apos;t find what you need? Contact LM Recovery directly with the details of your vehicle.</p><CallButton /></div><FAQ items={item.faq} /></div></section>
       <FinalCTA emergency={kind === 'recovery'} />
