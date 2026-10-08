@@ -3,9 +3,11 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'LM Recovery Kent | 24/7 Vehicle Recovery & Transport',
-  description: '24/7 vehicle recovery and transportation across Maidstone, Medway, Kent and nationwide England. Call LM Recovery directly.',
-  generator: 'v0.app',
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://lmrecovery.co.uk'),
+  title: { default: '24/7 Vehicle Recovery Kent | LM Recovery', template: '%s' },
+  description: '24/7 vehicle recovery and transport across Rochester, Maidstone, Medway, Kent and nationwide. Call LM Recovery directly.',
+  alternates: { canonical: '/' },
+  openGraph: { type: 'website', siteName: 'LM Recovery Kent', title: '24/7 Vehicle Recovery Kent | LM Recovery', description: 'Direct vehicle recovery and transport across Kent and nationwide.' },
   icons: { icon: '/icon.svg', apple: '/apple-icon.png' },
 }
 
