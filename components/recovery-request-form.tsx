@@ -37,7 +37,7 @@ export function RecoveryRequestForm({ mode = 'general' }: { mode?: FormMode }) {
       <label>Service required<select required name="Service required" defaultValue=""><option value="" disabled>Select a service</option><option>Breakdown Recovery</option><option>Vehicle Transport</option><option>Copart Collection</option><option>Other</option></select></label>
       <label>Message<textarea name="Message" rows={4} placeholder="Anything else LM Recovery should know?" /></label>
     </>}
-    <button className="button button-navy" type="submit">Prepare WhatsApp enquiry <ArrowRight /></button>
+    <button className="button button-navy" type="submit">Send details on WhatsApp <ArrowRight /></button>
     <p className="form-note">Your details open in WhatsApp so you can send them directly to LM Recovery.</p>
   </form>
 }

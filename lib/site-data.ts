@@ -25,8 +25,8 @@ export const areas = ['Rochester', 'Maidstone', 'Chatham', 'Strood', 'Gillingham
 
 export const serviceLinks = [
   { title: 'Breakdown Recovery', href: '/breakdown-recovery', image: genuineImages[0], text: '24/7 local recovery for cars, vans and motorcycles.' },
-  { title: 'Vehicle Transport', href: '/vehicle-transport', image: genuineImages[4], text: 'Planned vehicle movement across Kent and nationwide.' },
-  { title: 'Copart Collections', href: '/copart-collections', image: genuineImages[1], text: 'Collection and delivery of auction vehicles.' },
+  { title: 'Vehicle Transport', href: '/vehicle-transport', image: '/lm-recovery-hero-2.jpg', text: 'Planned vehicle movement across Kent and nationwide.' },
+  { title: 'Copart Collections', href: '/copart-collections', image: '/lm-recovery-hero-2.jpg', text: 'Collection and delivery of auction vehicles.' },
 ]
 
 export const navItems = [

@@ -7,7 +7,8 @@ export const metadata: Metadata = {
   title: { default: '24/7 Vehicle Recovery Kent | LM Recovery', template: '%s' },
   description: '24/7 vehicle recovery and transport across Rochester, Maidstone, Medway, Kent and nationwide. Call LM Recovery directly.',
   alternates: { canonical: '/' },
-  openGraph: { type: 'website', siteName: 'LM Recovery Kent', title: '24/7 Vehicle Recovery Kent | LM Recovery', description: 'Direct vehicle recovery and transport across Kent and nationwide.' },
+  openGraph: { type: 'website', siteName: 'LM Recovery Kent', title: '24/7 Vehicle Recovery Kent | LM Recovery', description: 'Direct vehicle recovery and transport across Kent and nationwide.', images: ['/opengraph-image'] },
+  twitter: { card: 'summary_large_image', title: '24/7 Vehicle Recovery Kent | LM Recovery', description: 'Direct vehicle recovery and transport across Kent and nationwide.', images: ['/opengraph-image'] },
   icons: { icon: '/icon.svg', apple: '/apple-icon.png' },
 }
 
