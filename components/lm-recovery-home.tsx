@@ -18,6 +18,7 @@ import {
 
 const phone = '07500473262'
 const whatsapp = 'https://wa.me/447500473262'
+const logoImage = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot_20261008_093817_Facebook-2Eswzl8DWOWYDDrhTqqxZS0VxeOYHX.jpg'
 
 const genuineImages = [
   'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/unnamed-jUOXFdIWfBLovf51io9uExr6bkzzTA.webp',
@@ -50,7 +51,7 @@ const faqs = [
 ]
 
 function Brand() {
-  return <a href="#top" className="brand" aria-label="LM Recovery home"><span className="brand-mark">LM</span><span>RECOVERY<span className="brand-kent"> KENT</span></span></a>
+  return <a href="#top" className="brand" aria-label="LM Recovery home"><span className="brand-logo"><Image src={logoImage} alt="LM Recovery" fill sizes="72px" /></span><span className="brand-wordmark">LM <b>RECOVERY</b></span></a>
 }
 
 function PrimaryButton({ children, href = `tel:${phone}`, className = '' }: { children: React.ReactNode; href?: string; className?: string }) {
