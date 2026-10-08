@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://lmrecovery.co.uk'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://lm-recovery-one.vercel.app'),
   title: { default: '24/7 Vehicle Recovery Kent | LM Recovery', template: '%s' },
   description: '24/7 vehicle recovery and transport across Rochester, Maidstone, Medway, Kent and nationwide. Call LM Recovery directly.',
   alternates: { canonical: '/' },

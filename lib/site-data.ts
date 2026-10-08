@@ -1,4 +1,4 @@
-export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://lmrecovery.co.uk'
+export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://lm-recovery-one.vercel.app'
 
 export const business = {
   name: 'LM Recovery Kent',
