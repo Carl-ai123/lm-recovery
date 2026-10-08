@@ -1,13 +1,14 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
 import { business, navItems } from '@/lib/site-data'
 import { MobileStickyCTA } from '@/components/mobile-sticky-cta'
 
 export function Brand() {
-  return <Link href="/" className="brand" aria-label="LM Recovery home"><span className="brand-monogram" aria-hidden="true">LM</span><span className="brand-lockup"><span className="brand-wordmark">LM <b>RECOVERY</b></span><small>24/7 VEHICLE RECOVERY</small></span></Link>
+  return <Link href="/" className="brand" aria-label="LM Recovery home"><span className="brand-preview-logo"><Image src="/lm-recovery-brand-preview.jpg" alt="LM Recovery" fill sizes="180px" /></span><span className="brand-lockup"><span className="brand-wordmark">LM <b>RECOVERY</b></span><small>24/7 VEHICLE RECOVERY</small></span></Link>
 }
 
 export function SiteHeader() {
