@@ -275,6 +275,47 @@ h3 { font-size:clamp(21px, 2vw, 26px); }
   .service-card:hover,.service-card:hover .service-image img { transform:none; }
 }
 
+/* Shared service-page layout: compact, editorial and operational. */
+.service-page-hero { min-height:480px; }
+.service-page-hero .page-hero-content { padding:74px 0 76px; }
+.service-page-hero .hero-overlay { background:linear-gradient(90deg, rgba(0,0,0,.9) 0%, rgba(0,12,25,.68) 54%, rgba(0,12,25,.2) 100%); }
+.service-overview-grid { display:grid; grid-template-columns:1.05fr .95fr; gap:var(--space-6); align-items:start; }
+.service-contact-panel { border-top:1px solid var(--line); padding-top:var(--space-4); max-width:420px; }
+.service-contact-panel > p:not(.eyebrow) { color:var(--muted); line-height:1.65; max-width:360px; }
+.service-handling .section-heading { margin-bottom:var(--space-4); }
+.service-handling .feature-grid { max-width:none; gap:0 var(--space-6); }
+.service-handling .feature-item { align-items:flex-start; padding:16px 0; border:0; border-top:1px solid var(--line); background:none; font-weight:800; line-height:1.45; }
+.service-handling .feature-item svg { width:18px; height:18px; flex:none; margin-top:2px; }
+.service-form-section .form-layout { grid-template-columns:1fr 1fr; gap:var(--space-6); }
+.service-form-section .request-form { border:1px solid var(--line); }
+.service-process-section .section-heading { margin-bottom:var(--space-4); }
+.service-coverage-grid { display:grid; grid-template-columns:5fr 7fr; gap:var(--space-6); align-items:center; }
+.service-coverage-grid > div:first-child > p:not(.eyebrow) { color:var(--muted); line-height:1.65; max-width:460px; }
+.service-area-list { display:grid; grid-template-columns:1fr 1fr; list-style:none; margin:var(--space-4) 0 0; padding:0; border-top:1px solid var(--line); }
+.service-area-list li { border-bottom:1px solid var(--line); }
+.service-area-list a { display:flex; align-items:center; justify-content:space-between; gap:var(--space-2); padding:13px 0; color:var(--ink); font-size:14px; font-weight:800; }
+.service-area-list svg { width:15px; height:15px; color:var(--blue); }
+.service-proof-inner { display:flex; justify-content:space-between; align-items:center; gap:var(--space-6); }
+.service-proof-inner h2 { max-width:560px; margin-bottom:0; }
+.service-proof-stat { display:flex; align-items:baseline; gap:var(--space-2); white-space:nowrap; }
+.service-proof-stat strong { color:#fff; font-size:56px; line-height:1; letter-spacing:-.04em; }
+.service-proof-stat span { color:var(--blue); font-size:30px; }
+.service-proof-stat p { color:#d6e5f6; font-size:15px; font-weight:800; margin:0; }
+
+@media (max-width:850px) {
+  .service-page-hero { min-height:520px; }
+  .service-page-hero .page-hero-content { padding:64px 0 72px; }
+  .service-overview-grid,
+  .service-form-section .form-layout,
+  .service-coverage-grid,
+  .service-proof-inner { grid-template-columns:1fr; display:grid; gap:var(--space-5); }
+  .service-contact-panel { max-width:none; }
+  .service-handling .feature-grid { grid-template-columns:1fr; }
+  .service-area-list { grid-template-columns:1fr; }
+  .service-proof-stat { justify-content:flex-start; }
+  .service-proof-stat strong { font-size:48px; }
+}
+
 /* Final responsive layout contract: keep phase-specific desktop rules from
    reintroducing multi-column layouts below the mobile breakpoint. */
 @media (max-width:850px) {
