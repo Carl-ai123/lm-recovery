@@ -276,3 +276,49 @@ h3 { font-size:clamp(21px, 2vw, 26px); }
   .service-card,.service-image img { transition:none; }
   .service-card:hover,.service-card:hover .service-image img { transform:none; }
 }
+
+/* Final responsive layout contract: keep phase-specific desktop rules from
+   reintroducing multi-column layouts below the mobile breakpoint. */
+@media (max-width:850px) {
+  .quote-grid,
+  .why-grid,
+  .areas-grid,
+  .faq-grid,
+  .proof-grid,
+  .service-grid,
+  .process-grid,
+  .form-row,
+  .gallery-grid {
+    grid-template-columns:1fr;
+  }
+
+  .quote-grid > *,
+  .why-grid > *,
+  .areas-grid > *,
+  .faq-grid > *,
+  .proof-grid > *,
+  .service-grid > *,
+  .process-grid > *,
+  .form-row > *,
+  .gallery-grid > * {
+    min-width:0;
+  }
+
+  .request-form input,
+  .request-form select,
+  .request-form textarea {
+    width:100%;
+    max-width:100%;
+  }
+}
+
+@media (max-width:600px) {
+  .homepage-area-list,
+  .footer-grid {
+    grid-template-columns:1fr;
+  }
+
+  .footer-grid > div:first-child {
+    grid-column:auto;
+  }
+}
