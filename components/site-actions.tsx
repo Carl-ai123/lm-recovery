@@ -16,7 +16,7 @@ export function ServiceCTA({ label = 'Request a quote', href = '/contact', class
 }
 
 export function FinalCTA({ emergency = false }: { emergency?: boolean }) {
-  return <section className="final-cta"><div className="container"><p className="eyebrow yellow">{emergency ? 'Need help right now?' : 'Direct contact'}</p><h2>{emergency ? <>Broken down<br /><em>right now?</em></> : <>Need recovery or<br /><em>vehicle transport?</em></>}</h2><p>{emergency ? 'Call LM Recovery directly for 24/7 vehicle recovery.' : 'Contact LM Recovery directly for recovery, transport or a collection quote.'}</p><div className="final-actions"><CallButton className="button-yellow" /><WhatsAppButton /></div><a className="alt-phone" href={`tel:${business.secondaryPhone}`}>Alternative phone: {business.secondaryPhoneDisplay}</a></div></section>
+  return <section className="final-cta"><div className="container"><p className="eyebrow blue">{emergency ? 'Need help right now?' : 'Direct contact'}</p><h2>{emergency ? 'Broken down right now?' : <>Need recovery or <em>vehicle transport?</em></>}</h2><p>{emergency ? 'Call or WhatsApp LM Recovery directly for 24/7 vehicle recovery.' : 'Contact LM Recovery directly for recovery, transport or a collection quote.'}</p><div className="final-actions"><CallButton /><WhatsAppButton /></div><a className="alt-phone" href={`tel:${business.secondaryPhone}`}>Alternative phone: {business.secondaryPhoneDisplay}</a></div></section>
 }
 
 export function TrustRating() {
